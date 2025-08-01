@@ -13,7 +13,7 @@ apt update -y
 apt install sudo vim tmux ufw -y
 
 # add user to sudo group
-useradd -aG $username
+usermod -aG sudo $username
 
 # configure static ip
 cp ./interface_template interfaces
