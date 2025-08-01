@@ -16,16 +16,16 @@ apt install sudo vim tmux ufw -y
 useradd -aG $username
 
 # configure static ip
-cp ./interface_template $iface
+cp ./interface_template interfaces
 
-sed "s/interfacevalue/$iface/g" $iface
-sed "s/addressvalue/$ip_addr/" $iface
-sed "s/netmaskvalue/$netmask/" $iface
-sed "s/gatewayvalue/$gateway/" $iface
-sed "s/dns-searchvalue/$dns_domain/" $iface
-sed "s/dns-nameserversvalue/$dns_addr/" $iface
+sed "s/interfacevalue/$iface/g" interfaces
+sed "s/addressvalue/$ip_addr/" interfaces
+sed "s/netmaskvalue/$netmask/" interfaces
+sed "s/gatewayvalue/$gateway/" interfaces
+sed "s/dns-searchvalue/$dns_domain/" interfaces
+sed "s/dns-nameserversvalue/$dns_addr/" interfaces
 
-cp ./$iface /etc/network/interfaces/$iface
+cp ./interfaces /etc/network/interfaces
 
 read -n 1 -p "y: Restart networking, reconnect via ssh to new IP: $ip_addr | n: manually restart networking:  " choice
 echo 
