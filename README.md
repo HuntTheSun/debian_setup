@@ -14,10 +14,10 @@ apt install git -y
 git clone https://github.com/HuntTheSun/debian_setup && cd debian_setup
 ```
 
-3. Variablen einstellen
+3. Variablen einstellen & skript ausführen
 ```
 ip a #interfacename wahrscheinlich entweder enp1s0 oder eth0
-
-
+#variablen einstellen 
+bash install_combined.sh
 ```
 

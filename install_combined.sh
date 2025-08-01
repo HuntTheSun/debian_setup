@@ -18,7 +18,7 @@ useradd -aG $username
 # configure static ip
 cp ./interface_template $iface
 
-sed "s/interfacevalue/$iface/" $iface
+sed "s/interfacevalue/$iface/g" $iface
 sed "s/addressvalue/$ip_addr/" $iface
 sed "s/netmaskvalue/$netmask/" $iface
 sed "s/gatewayvalue/$gateway/" $iface
@@ -27,7 +27,7 @@ sed "s/dns-nameserversvalue/$dns_addr/" $iface
 
 cp ./$iface /etc/network/interfaces/$iface
 
-read -p "y: Restart networking, reconnect via ssh to new IP: $ip_addr | n: manually restart networking" choice
+read -n 1 -p "y: Restart networking, reconnect via ssh to new IP: $ip_addr | n: manually restart networking:  " choice
 echo 
 
 case "$choice" in
