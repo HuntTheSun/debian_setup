@@ -1,0 +1,6 @@
+iface interfacevalue inet static 
+        address addressvalue
+        netmask netmaskvalue
+        gateway gatewayvalue
+        dns-search dns-searchvalue
+        dns-nameservers dns-nameserversvalue
