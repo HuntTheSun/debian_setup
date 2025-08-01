@@ -18,12 +18,12 @@ useradd -aG $username
 # configure static ip
 cp ./interface_template interfaces
 
-sed "s/interfacevalue/$iface/g" interfaces
-sed "s/addressvalue/$ip_addr/" interfaces
-sed "s/netmaskvalue/$netmask/" interfaces
-sed "s/gatewayvalue/$gateway/" interfaces
-sed "s/dns-searchvalue/$dns_domain/" interfaces
-sed "s/dns-nameserversvalue/$dns_addr/" interfaces
+sed -i "s/interfacevalue/$iface/g" interfaces
+sed -i "s/addressvalue/$ip_addr/" interfaces
+sed -i "s/netmaskvalue/$netmask/" interfaces
+sed -i "s/gatewayvalue/$gateway/" interfaces
+sed -i "s/dns-searchvalue/$dns_domain/" interfaces
+sed -i "s/dns-nameserversvalue/$dns_addr/" interfaces
 
 cp ./interfaces /etc/network/interfaces
 
