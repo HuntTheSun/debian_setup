@@ -24,13 +24,14 @@ bash install_combined.sh
 4. Neustarten (oder aus und einloggen) und neu ssh verbinden
 ```
 reboot 0
+ssh username@neue_ip
 ```
 
-5. install_ordner zum home-verzeichnis user kopieren
+5. install_ordner ins home-verzeichnis user bringen und vom root verzeichnis loeschen
 ```
 cd ~
-sudo mv /root/debian_setup .
-sudo chown -R username:username debian_setup
+git clone https://github.com/HuntTheSun/debian_setup
+sudo rm -rf /root/debian_setup
 cd debian_setup
 ```
 
