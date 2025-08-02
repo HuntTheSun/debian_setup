@@ -16,6 +16,7 @@ apt install sudo vim tmux ufw -y
 usermod -aG sudo $username
 
 # configure static ip
+cp /etc/network/interfaces /etc/network/interfaces.bak
 cp ./interface_template interfaces
 
 sed -i "s/interfacevalue/$iface/g" interfaces

@@ -21,3 +21,15 @@ ip a #interfacename wahrscheinlich entweder enp1s0 oder eth0
 bash install_combined.sh
 ```
 
+4. Neustarten (oder aus und einloggen) und neu ssh verbinden
+```
+reboot 0
+```
+
+5. install_ordner zum home-verzeichnis user kopieren
+```
+sudo mv /root/debian_setup .
+```
+
+
+
