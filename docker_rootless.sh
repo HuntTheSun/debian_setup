@@ -11,3 +11,5 @@ dockerd-rootless-setuptool.sh install
 sudo systemctl disable docker.service
 sudo systemctl stop docker.service
 
+echo "##############TESTING DOCKER ROOTLESS##############################"
+docker run hello-world
