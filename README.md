@@ -28,8 +28,19 @@ reboot 0
 
 5. install_ordner zum home-verzeichnis user kopieren
 ```
+cd ~
 sudo mv /root/debian_setup .
+sudo chown -R username:username debian_setup
+cd debian_setup
 ```
 
+6. install docker
+```
+sudo bash install_docker.sh
+```
 
+7. configure docker rootless
+```
+bash docker_rootless.sh
+```
 

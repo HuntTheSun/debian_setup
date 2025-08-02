@@ -17,11 +17,3 @@ apt-get update -y
 apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 docker run hello-world
-
-# config 
-echo "Configuring rootless docker"
-echo
-
-apt install slirp4netns dbus-user-session docker-ce-rootless-extras -y
-dockerd-rootless-setuptool.sh install
-
