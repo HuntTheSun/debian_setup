@@ -17,7 +17,7 @@ git clone https://github.com/HuntTheSun/debian_setup && cd debian_setup
 3. Variablen einstellen & skript ausführen
 ```
 ip a #interfacename wahrscheinlich entweder enp1s0 oder eth0
-#variablen einstellen 
+nano install_combined.sh #variablen einstellen 
 bash install_combined.sh
 ```
 
@@ -44,4 +44,6 @@ sudo bash install_docker.sh
 ```
 bash docker_rootless.sh
 ```
+
+8. install and config ufw firewall
 
