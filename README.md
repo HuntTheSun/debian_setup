@@ -46,4 +46,7 @@ bash docker_rootless.sh
 ```
 
 8. install and config ufw firewall
+```
+bash firewall.sh
+```
 
