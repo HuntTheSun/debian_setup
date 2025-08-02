@@ -5,6 +5,6 @@ set -e
 echo "Configuring rootless docker"
 echo
 
-sudo apt install slirp4netns dbus-user-session docker-ce-rootless-extras -y
+sudo apt install slirp4netns dbus-user-session docker-ce-rootless-extras uidmap -y
 dockerd-rootless-setuptool.sh install
 
